@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parkwood Place HOA — Notice & Petition</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+  :root{--navy:#1a2c4e;--red:#b91c1c;--gold:#c9a84c;--light:#f5f4f0;--mid:#e8e5de;--text:#1e1e1e;--muted:#5a5a5a;--white:#ffffff}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',sans-serif;font-size:17px;line-height:1.7;color:var(--text);background:var(--light)}
+  .masthead{background:var(--navy);color:var(--white);text-align:center;padding:48px 24px 36px;position:relative}
+  .masthead::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--red),var(--gold))}
+  .masthead .overline{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,46px);font-weight:900;line-height:1.1;color:var(--white);margin-bottom:10px}
+  .masthead .subtitle{font-size:15px;color:rgba(255,255,255,.7);font-style:italic}
+  .date-badge{display:inline-block;margin-top:18px;background:var(--gold);color:var(--navy);font-weight:700;font-size:13px;padding:6px 18px;border-radius:2px}
+  .verify-bar{background:#1e3a5f;color:rgba(255,255,255,.8);text-align:center;padding:9px 24px;font-size:13px}
+  .verify-bar a{color:var(--gold);font-weight:700;text-decoration:none}
+  .alert-bar{background:var(--red);color:var(--white);text-align:center;padding:13px 24px;font-weight:700;font-size:15px}
+  .alert-bar a{color:var(--white);text-decoration:underline}
+  .container{max-width:800px;margin:0 auto;padding:0 24px}
+  .section{padding:44px 0;border-bottom:1px solid var(--mid)}
+  .section:last-of-type{border-bottom:none}
+  .section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .section h2{font-family:'Playfair Display',serif;font-size:clamp(20px,3.5vw,28px);font-weight:700;color:var(--navy);margin-bottom:18px;line-height:1.2}
+  .section p{margin-bottom:14px}
+  .section p:last-child{margin-bottom:0}
+  /* CITATION TAGS */
+  .cite{display:inline-block;background:var(--navy);color:var(--white);font-size:11px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:.04em;margin:0 2px;vertical-align:middle;white-space:nowrap}
+  .cite.red{background:var(--red)}
+  .cite.gold{background:var(--gold);color:var(--navy)}
+  blockquote{border-left:4px solid var(--gold);margin:20px 0;padding:14px 22px;background:var(--white);font-style:italic;font-size:16px;color:var(--navy);border-radius:0 4px 4px 0}
+  .styled-list{list-style:none;margin:14px 0 18px;padding:0}
+  .styled-list li{padding:7px 0 7px 26px;position:relative;border-bottom:1px solid var(--mid);font-size:16px}
+  .styled-list li:last-child{border-bottom:none}
+  .styled-list.bullets li::before{content:'•';position:absolute;left:6px;color:var(--gold);font-weight:700;font-size:18px;top:6px}
+  .styled-list.numbers{counter-reset:item}
+  .styled-list.numbers li::before{counter-increment:item;content:counter(item);position:absolute;left:0;top:8px;background:var(--navy);color:var(--white);font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .timeline{margin:22px 0}
+  .timeline-item{display:flex;gap:18px;margin-bottom:18px;align-items:flex-start}
+  .timeline-date{flex-shrink:0;width:105px;font-weight:700;font-size:13px;color:var(--navy);padding-top:2px;text-align:right}
+  .timeline-line{flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+  .timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--gold);margin-top:4px;flex-shrink:0}
+  .timeline-connector{width:2px;flex:1;background:var(--mid);min-height:22px}
+  .timeline-item:last-child .timeline-connector{display:none}
+  .timeline-text{font-size:16px;padding-top:2px}
+  /* VIOLATION CARDS */
+  .violation-card{background:var(--white);border:1px solid var(--mid);border-left:4px solid var(--red);padding:18px 20px;margin-bottom:14px;border-radius:0 6px 6px 0}
+  .violation-card .vc-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  .violation-card h4{font-size:15px;font-weight:700;color:var(--navy);margin:0}
+  .violation-card .vc-says{font-size:14px;margin-bottom:8px;padding:8px 12px;background:#f8f8f8;border-radius:4px;border-left:3px solid var(--gold)}
+  .violation-card .vc-says strong{color:var(--navy)}
+  .violation-card .vc-did{font-size:14px;margin-bottom:8px}
+  .violation-card .vc-did strong{color:var(--red)}
+  .violation-card .vc-verify{font-size:12px;color:var(--muted);font-style:italic}
+  .violation-card .vc-verify a{color:var(--navy);font-weight:600}
+  .callout{background:var(--navy);color:var(--white);padding:22px 26px;border-radius:4px;margin:24px 0;font-size:16px;line-height:1.6}
+  .callout strong{color:var(--gold)}
+  .callout-red{background:#fef2f2;border:1px solid #fecaca;border-left:4px solid var(--red);padding:18px 22px;border-radius:0 4px 4px 0;margin:22px 0;font-size:16px}
+  /* CITATION REFERENCE TABLE */
+  .cite-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+  .cite-table th{background:var(--navy);color:var(--white);padding:10px 12px;text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .cite-table td{padding:10px 12px;border-bottom:1px solid var(--mid);vertical-align:top}
+  .cite-table tr:last-child td{border-bottom:none}
+  .cite-table tr:hover td{background:#fafaf8}
+  .cite-table td:first-child{white-space:nowrap;font-weight:700}
+  .cite-table td a{color:var(--navy);font-weight:600}
+  .meeting-box{background:var(--white);border:2px solid var(--navy);border-radius:6px;overflow:hidden;margin:24px 0}
+  .meeting-box-header{background:var(--navy);color:var(--white);padding:12px 22px;font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+  .meeting-box-body{padding:18px 22px}
+  .meeting-detail{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--mid);align-items:flex-start}
+  .meeting-detail:last-child{border-bottom:none}
+  .meeting-label{font-weight:700;font-size:13px;text-transform:uppercase;color:var(--navy);width:76px;flex-shrink:0;padding-top:1px}
+  .meeting-value{font-size:15px}
+  .meeting-value a{color:var(--navy);font-weight:600;word-break:break-all}
+  .questions-box{background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:18px 22px;margin:18px 0}
+  .questions-box p{font-weight:700;margin-bottom:10px;font-size:15px;color:var(--navy)}
+  .questions-box ol{padding-left:20px}
+  .questions-box ol li{font-size:15px;margin-bottom:8px}
+  .divider-gold{height:3px;background:linear-gradient(90deg,var(--navy),var(--gold),var(--navy));margin:0}
+  /* PETITION */
+  .petition-masthead{background:var(--red);color:var(--white);text-align:center;padding:40px 24px 30px;position:relative}
+  .petition-masthead::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),#fff,var(--gold))}
+  .petition-masthead .overline{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:10px}
+  .petition-masthead h2{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,36px);font-weight:900;color:var(--white);margin-bottom:10px;line-height:1.15}
+  .petition-masthead p{font-size:15px;color:rgba(255,255,255,.8);font-style:italic}
+  .sig-badge{display:inline-block;margin-top:18px;background:var(--white);color:var(--red);font-weight:900;font-size:15px;padding:7px 20px;border-radius:2px}
+  .demand-card{background:var(--white);border:1px solid var(--mid);border-radius:6px;padding:18px 20px;margin-bottom:12px;display:flex;gap:16px;align-items:flex-start}
+  .demand-num{background:var(--red);color:var(--white);font-weight:900;font-size:17px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .demand-body strong{color:var(--red);font-size:15px;display:block;margin-bottom:4px}
+  .demand-body p{font-size:15px;color:var(--muted);margin:0}
+  .demand-cites{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px}
+  .progress-wrap{background:var(--mid);border-radius:100px;height:12px;margin:10px 0 6px;overflow:hidden}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--gold));border-radius:100px;transition:width .6s ease;min-width:4px}
+  .sig-goal{font-size:13px;font-weight:700;color:var(--navy);text-align:center;letter-spacing:.03em;margin-bottom:6px}
+  #sig-list-wrap{margin-top:16px}
+  .sig-entry{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--mid);animation:fadeIn .4s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+  .sig-avatar{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--white);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .sig-name{font-weight:600;font-size:15px}
+  .sig-info{font-size:13px;color:var(--muted)}
+  .sig-time{margin-left:auto;font-size:12px;color:var(--muted);white-space:nowrap}
+  .petition-form-wrap{background:var(--white);border:2px solid var(--navy);border-radius:8px;overflow:hidden;margin:24px 0}
+  .petition-form-header{background:var(--navy);color:var(--white);padding:13px 22px;font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+  .petition-form-body{padding:22px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  .form-row.full{grid-template-columns:1fr}
+  .form-group label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-bottom:5px}
+  .form-group input,.form-group textarea{width:100%;border:1px solid #ccc;border-radius:4px;padding:9px 11px;font-family:'Source Sans 3',sans-serif;font-size:15px;color:var(--text);background:var(--light);transition:border-color .2s}
+  .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--navy);background:var(--white)}
+  .form-group textarea{resize:vertical;min-height:58px}
+  .form-consent{display:flex;align-items:flex-start;gap:11px;margin:18px 0;padding:14px;background:#f0f4ff;border-radius:4px;border:1px solid #c7d2fe}
+  .form-consent input[type=checkbox]{width:17px;height:17px;flex-shrink:0;margin-top:2px;accent-color:var(--navy);cursor:pointer}
+  .form-consent label{font-size:14px;color:var(--muted);cursor:pointer;line-height:1.5}
+  .submit-btn{width:100%;background:var(--red);color:var(--white);border:none;padding:15px 22px;font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;border-radius:4px;cursor:pointer;transition:background .2s}
+  .submit-btn:hover{background:#991b1b}
+  .submit-btn:disabled{background:#9ca3af;cursor:not-allowed}
+  .export-wrap{margin-top:28px;padding:22px;background:var(--white);border:2px dashed var(--navy);border-radius:8px;text-align:center}
+  .export-wrap p{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .export-btn{display:inline-block;background:var(--navy);color:var(--white);border:none;padding:14px 28px;font-family:'Source Sans 3',sans-serif;font-size:15px;font-weight:700;border-radius:4px;cursor:pointer;transition:background .2s}
+  .export-btn:hover{background:#0f1e38}
+  .export-btn:disabled{background:#9ca3af;cursor:not-allowed}
+  .export-note{font-size:12px;color:var(--muted);margin-top:10px}
+  #form-success{display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:4px;padding:18px 22px;margin-top:14px;text-align:center}
+  #form-success .check{font-size:30px;margin-bottom:7px}
+  #form-success p{font-size:15px;color:#166534;font-weight:600}
+  .submit-instructions{background:var(--light);border:1px solid var(--mid);border-radius:6px;padding:18px 22px;margin:22px 0;font-size:15px}
+  footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:26px 24px;font-size:13px;line-height:1.8}
+  footer a{color:var(--gold);text-decoration:none}
+  @media(max-width:600px){.form-row{grid-template-columns:1fr}.timeline-date{width:78px;font-size:12px}.meeting-detail{flex-direction:column;gap:3px}.meeting-label{width:auto}.cite-table{font-size:12px}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="overline">Parkwood Place HOA &mdash; Harris County, Texas</div>
+  <h1>Notice to Homeowners<br>&amp; Petition for Action</h1>
+  <div class="subtitle">Regarding the Unlawful Attempted Removal of Director Candi Repka</div>
+  <div class="date-badge">June 2026 &mdash; Tex. Prop. Code § 209.0059</div>
+</div>
+<div class="verify-bar">All Texas statutes cited in this document are publicly verifiable at <a href="https://statutes.capitol.texas.gov" target="_blank">statutes.capitol.texas.gov</a> &mdash; Governing documents are in your HOA Handbook from Prestige Association Management Group</div>
+<div class="alert-bar">⚠️ Special Board Meeting: <strong>Wednesday, June 11, 2026 at 4:30 PM via Zoom</strong> &mdash; <a href="#meeting">Details &amp; Zoom link →</a></div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-label">What You Need to Know</div>
+    <h2>A Director Was Removed Without Evidence, Notice, or Due Process</h2>
+    <p>Dear Fellow Parkwood Place Homeowners,</p>
+    <p>On or about April 27, 2026, the Board of Directors, through Association Manager Chris Bergeron of Prestige Association Management Group, purported to remove me immediately from the Board of Directors of Parkwood Place HOA — without evidence, without notice, and without any process permitted by our governing documents or Texas law.</p>
+    <p>Every claim in this notice is backed by a specific provision in your HOA Handbook or a Texas statute you can read yourself at <a href="https://statutes.capitol.texas.gov" target="_blank"><strong>statutes.capitol.texas.gov</strong></a>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">The Governing Standard</div>
+    <h2>What the Governing Documents Say</h2>
+    <p><span class="cite gold">B-1</span> <strong>Bylaws, Article IV, Section 5</strong> &mdash; <em>Your HOA Handbook, Article IV</em></p>
+    <blockquote>"No Member of the Board of Directors shall be removed from office except for malfeasance in the conduct of his or her duties."</blockquote>
+    <p>This is the <em>only</em> permitted standard. "Malfeasance" requires specific, proven wrongdoing — vague references to "ethical concerns" or "best interests" do not qualify. The Board's removal letter contained none of the following:</p>
+    <ul class="styled-list bullets">
+      <li>Any specific act constituting malfeasance</li>
+      <li>Any factual findings, evidence, or written determination</li>
+      <li>Notice of any meeting at which removal was discussed or voted upon</li>
+      <li>An opportunity for Director Repka to respond or be heard</li>
+      <li>Minutes, voting records, or written consents showing a valid Board action</li>
+    </ul>
+    <p style="margin-top:16px"><span class="cite gold">B-2</span> <strong>Declaration, Article XII, Section 3(a)</strong> &mdash; <em>Your HOA Handbook, Article XII</em></p>
+    <p>This provision limits Board authority to act adversely against a director to circumstances involving <strong>willful misfeasance or bad faith</strong>. Stripping Director Repka of portal access without any such finding is itself a bad faith act outside the Board's lawful authority.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Chronology</div>
+    <h2>Timeline of Events</h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-date">Apr 27, 2026</div><div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div><div class="timeline-text">Removal letter received. Written dispute sent same day. Board cited <span class="cite gold">B-1</span> as authority but identified zero acts of malfeasance.</div></div>
+      <div class="timeline-item"><div class="timeline-date">May 6, 2026</div><div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div><div class="timeline-text">Formal records inspection request submitted pursuant to <span class="cite red">T-1</span> <strong>Tex. Prop. Code § 209.005</strong>. Response required within 10 business days. No response received.</div></div>
+      <div class="timeline-item"><div class="timeline-date">May 13, 2026</div><div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div><div class="timeline-text">Third written dispute and final records demand. Board warned refusal compounds violations of <span class="cite red">T-1</span> and may constitute spoliation of evidence.</div></div>
+      <div class="timeline-item"><div class="timeline-date">May 15, 2026</div><div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div><div class="timeline-text">Board portal access removed without notice. Reinstatement requested. Removal of access without a noticed meeting violates <span class="cite red">T-2</span> <strong>§ 209.0051</strong>.</div></div>
+      <div class="timeline-item"><div class="timeline-date">May 29, 2026</div><div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div><div class="timeline-text">Legal counsel Harry J. Schulz, III of Schulz &amp; Schulz, P.C. sent formal demand letter citing <span class="cite red">T-1</span> <span class="cite red">T-2</span> <span class="cite">O-1</span> <span class="cite">O-2</span> <span class="cite">O-3</span>. Board has not responded.</div></div>
+    </div>
+    <div class="callout"><strong>To date:</strong> No records produced. No malfeasance identified. No rescission of the removal action.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Violation by Violation</div>
+    <h2>The Board's Own Conduct Constitutes Malfeasance — Citation by Citation</h2>
+    <p>Each violation below cites the specific provision the Board broke. Click any statute link to read the full text at <a href="https://statutes.capitol.texas.gov" target="_blank"><strong>statutes.capitol.texas.gov</strong></a>.</p>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite gold">B-1</span><h4>Bylaws, Article IV, Section 5 — Removal Without Malfeasance</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> A director may only be removed for malfeasance in the conduct of duties.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Issued a removal letter citing this provision but identified zero specific acts of malfeasance. Referenced "ethical concerns" and "best interests" — language that does not satisfy the malfeasance standard.</div>
+      <div class="vc-verify">✔ Verify: Your HOA Handbook — Article IV, Section 5</div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite gold">B-2</span><h4>Declaration, Article XII, Section 3(a) — Bad Faith Action</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> Adverse action against a director requires a finding of willful misfeasance or bad faith.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Stripped Director Repka of portal access and Board communications without any such finding — conduct that is itself willful and in bad faith.</div>
+      <div class="vc-verify">✔ Verify: Your HOA Handbook — Declaration, Article XII, Section 3(a)</div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite red">T-1</span><h4>Tex. Prop. Code § 209.005 — Unlawful Refusal to Produce Records</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> The Association must make books and records available for inspection and provide copies within <strong>10 business days</strong> of a written request by a member.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Received a formal records request on May 6, 2026. Over 30 days later, not a single document has been produced. This violates Director Repka's rights and the rights of every homeowner to inspect Association records.</div>
+      <div class="vc-verify">✔ Verify: <a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.005" target="_blank">statutes.capitol.texas.gov — search "Texas Property Code 209.005"</a></div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite red">T-2</span><h4>Tex. Prop. Code § 209.0051 — No Proper Notice of Board Meeting</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> Board meetings must be open, properly noticed at least 72 hours in advance, and Board actions must be taken at properly noticed, open meetings.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Took removal action and stripped portal access with no meeting notice provided, no open meeting held, and no agenda, minutes, or written consent ever produced.</div>
+      <div class="vc-verify">✔ Verify: <a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.0051" target="_blank">statutes.capitol.texas.gov — search "Texas Property Code 209.0051"</a></div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite red">T-2</span><span class="cite gold">B-1</span><h4>§ 209.0051 + Bylaws — No Notice of Allegations or Opportunity to Be Heard</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> Tex. Prop. Code § 209.0051 requires proper notice before Board action. The Bylaws require compliance with governing procedures before removal. Together, these require that a director receive written notice of specific allegations and a meaningful opportunity to respond.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Issued an immediate removal letter with no prior notice of allegations, no hearing, and no opportunity to respond. Director Repka learned of the removal when the letter arrived.</div>
+      <div class="vc-verify">✔ Verify: statutes.capitol.texas.gov — § 209.0051; HOA Handbook — Art. IV § 5</div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite">O-1</span><h4>Tex. Bus. Orgs. Code § 22.102 — Board Must Act Within Governing Documents</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> A nonprofit corporation's board may only act within the authority granted by the entity's governing documents and applicable Texas law.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Acted entirely outside the authority granted by the Bylaws and Declaration — no malfeasance finding, no properly noticed meeting, no documented vote.</div>
+      <div class="vc-verify">✔ Verify: <a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.22.htm#22.102" target="_blank">statutes.capitol.texas.gov — search "Texas Business Organizations Code 22.102"</a></div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite">O-2</span><h4>Tex. Bus. Orgs. Code § 22.211 — Director Removal Must Follow Governing Documents</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> Removal of a director of a nonprofit corporation must comply with the procedures set forth in the corporation's governing documents. The Bylaws are controlling.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Removed a director without following a single procedure required by the Bylaws — no malfeasance finding, no noticed meeting, no documented vote, no opportunity to be heard.</div>
+      <div class="vc-verify">✔ Verify: <a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.22.htm#22.211" target="_blank">statutes.capitol.texas.gov — search "Texas Business Organizations Code 22.211"</a></div>
+    </div>
+
+    <div class="violation-card">
+      <div class="vc-header"><span class="cite">O-3</span><h4>Tex. Bus. Orgs. Code § 20.002 — Ultra Vires Acts; Personal Exposure for Board Members</h4></div>
+      <div class="vc-says"><strong>What it says:</strong> Acts taken by a governing authority that exceed its legal power under the governing documents constitute ultra vires acts that may be challenged and voided. Individual board members who authorized or participated in ultra vires acts may bear personal legal exposure.</div>
+      <div class="vc-did"><strong>What the Board did:</strong> Took removal action with no legal authority under the Bylaws, Declaration, or Texas law. Each Board member who voted for, authorized, or ratified this action participated in an ultra vires act.</div>
+      <div class="vc-verify">✔ Verify: <a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.20.htm#20.002" target="_blank">statutes.capitol.texas.gov — search "Texas Business Organizations Code 20.002"</a></div>
+    </div>
+
+    <div class="callout-red"><strong>Every violation above is backed by specific language in your HOA Handbook or a Texas statute you can read in full at statutes.capitol.texas.gov.</strong> None of this is interpretation — it is the plain text of the law.</div>
+  </div>
+
+  <!-- CITATION REFERENCE TABLE -->
+  <div class="section">
+    <div class="section-label">Quick Reference</div>
+    <h2>Citation Reference Table</h2>
+    <p>Every code, article, and section cited in this document — searchable in 30 seconds.</p>
+    <table class="cite-table">
+      <thead><tr><th>Code</th><th>Citation</th><th>What It Governs</th><th>Where to Find It</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cite gold">B-1</span></td><td>Bylaws, Art. IV § 5</td><td>Director removal: malfeasance only</td><td>HOA Handbook — Article IV, Section 5</td></tr>
+        <tr><td><span class="cite gold">B-2</span></td><td>Declaration, Art. XII § 3(a)</td><td>Willful misfeasance/bad faith required for adverse action</td><td>HOA Handbook — Declaration, Article XII, Section 3(a)</td></tr>
+        <tr><td><span class="cite red">T-1</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.005" target="_blank">Tex. Prop. Code § 209.005</a></td><td>Member right to inspect/copy Association records within 10 days</td><td>Search "Texas Property Code 209.005"</td></tr>
+        <tr><td><span class="cite red">T-2</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.0051" target="_blank">Tex. Prop. Code § 209.0051</a></td><td>Board meeting requirements: open, 72-hr notice, proper procedures</td><td>Search "Texas Property Code 209.0051"</td></tr>
+        <tr><td><span class="cite red">T-3</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.0059" target="_blank">Tex. Prop. Code § 209.0059</a></td><td>Homeowners may petition for special meeting; 10% of owners required</td><td>Search "Texas Property Code 209.0059"</td></tr>
+        <tr><td><span class="cite red">T-4</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.209.htm#209.00592" target="_blank">Tex. Prop. Code § 209.00592</a></td><td>Homeowners may remove a board member by majority vote at special meeting</td><td>Search "Texas Property Code 209.00592"</td></tr>
+        <tr><td><span class="cite">O-1</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.22.htm#22.102" target="_blank">Tex. Bus. Orgs. Code § 22.102</a></td><td>Nonprofit board limited to authority granted by governing documents</td><td>Search "Texas Business Organizations Code 22.102"</td></tr>
+        <tr><td><span class="cite">O-2</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.22.htm#22.211" target="_blank">Tex. Bus. Orgs. Code § 22.211</a></td><td>Director removal must comply with governing documents</td><td>Search "Texas Business Organizations Code 22.211"</td></tr>
+        <tr><td><span class="cite">O-3</span></td><td><a href="https://statutes.capitol.texas.gov/Docs/BO/htm/BO.20.htm#20.002" target="_blank">Tex. Bus. Orgs. Code § 20.002</a></td><td>Ultra vires acts; personal exposure for individual board members</td><td>Search "Texas Business Organizations Code 20.002"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Your Rights</div>
+    <h2>Why This Matters to Every Homeowner</h2>
+    <p>A Board that can remove a director without notice, without evidence, and without due process is a Board that operates without accountability. The same protections that protect a director protect every homeowner.</p>
+    <p>Under <span class="cite red">T-1</span> <strong>Tex. Prop. Code § 209.005</strong>, you personally have the right to inspect Association records at any time. Under <span class="cite red">T-2</span> <strong>§ 209.0051</strong>, Board actions must be taken at open, noticed meetings you are entitled to attend. Those rights are being violated right now.</p>
+  </div>
+
+  <div class="section" id="meeting">
+    <div class="section-label">Upcoming Meeting — Be There</div>
+    <h2>Special Board Meeting — June 11, 2026</h2>
+    <p><strong>Your presence matters.</strong> Under <span class="cite red">T-2</span> <strong>Tex. Prop. Code § 209.0051</strong>, you are entitled to attend open Board meetings. This is your Association — be there.</p>
+    <div class="meeting-box">
+      <div class="meeting-box-header">📅 Meeting Details</div>
+      <div class="meeting-box-body">
+        <div class="meeting-detail"><div class="meeting-label">Date</div><div class="meeting-value"><strong>Wednesday, June 11, 2026</strong></div></div>
+        <div class="meeting-detail"><div class="meeting-label">Time</div><div class="meeting-value"><strong>4:30 PM</strong></div></div>
+        <div class="meeting-detail"><div class="meeting-label">Location</div><div class="meeting-value">Zoom Meeting</div></div>
+        <div class="meeting-detail"><div class="meeting-label">Zoom Link</div><div class="meeting-value"><a href="https://us06web.zoom.us/j/89431773584?pwd=zh9O1v8AbbI3STOgueIW4ZLqab2ZZ1.1" target="_blank">https://us06web.zoom.us/j/89431773584</a></div></div>
+        <div class="meeting-detail"><div class="meeting-label">Agenda</div><div class="meeting-value">Vote to remove Director Candi Repka for alleged malfeasance</div></div>
+      </div>
+    </div>
+    <div class="questions-box">
+      <p>Demand the Board answer these questions on the record:</p>
+      <ol>
+        <li>Under <span class="cite gold">B-1</span> Bylaws Art. IV § 5 — what specific acts of malfeasance are alleged?</li>
+        <li>Under <span class="cite red">T-2</span> § 209.0051 — when was the removal meeting held and where are the notice and minutes?</li>
+        <li>Under <span class="cite red">T-1</span> § 209.005 — why have four records requests been ignored for over 30 days?</li>
+        <li>Under <span class="cite">O-2</span> § 22.211 — which Board members voted, and under what specific authority?</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Director Repka's Statement</div>
+    <h2>My Position</h2>
+    <p>I do not concede that any valid removal has occurred. I continue to assert my rights under <span class="cite gold">B-1</span> <span class="cite gold">B-2</span> <span class="cite red">T-1</span> <span class="cite red">T-2</span> <span class="cite">O-1</span> <span class="cite">O-2</span> <span class="cite">O-3</span> and will pursue all available legal and equitable remedies.</p>
+    <p>Questions? Contact me: <strong>candirepka@gmail.com</strong> &mdash; <strong>(361) 523-9119</strong></p>
+    <p style="margin-top:16px;font-style:italic;color:var(--muted);font-size:15px;">— Candi Repka, Director, Parkwood Place HOA</p>
+  </div>
+
+</div>
+
+<div class="divider-gold"></div>
+
+<div class="petition-masthead">
+  <div class="overline">Take Action — Tex. Prop. Code § 209.0059 [T-3] &amp; § 209.00592 [T-4]</div>
+  <h2>Homeowner Petition for Special Meeting<br>&amp; Board Accountability</h2>
+  <p>Only 10 of 100 homeowners needed to legally compel the Board to act under <strong>§ 209.0059</strong>.</p>
+  <div class="sig-badge">✍️ Sign the Petition Below</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-label">The Four Demands</div>
+    <h2>This Petition Demands:</h2>
+    <div style="margin-top:18px">
+      <div class="demand-card">
+        <div class="demand-num">1</div>
+        <div class="demand-body">
+          <strong>Remove Board Members Who Voted for This Removal</strong>
+          <p>Any Board members who voted for, authorized, or ratified the purported removal — their conduct violates:</p>
+          <div class="demand-cites"><span class="cite gold">B-1</span><span class="cite gold">B-2</span><span class="cite red">T-2</span><span class="cite">O-1</span><span class="cite">O-2</span><span class="cite">O-3</span></div>
+        </div>
+      </div>
+      <div class="demand-card">
+        <div class="demand-num">2</div>
+        <div class="demand-body">
+          <strong>Reinstate Director Candi Repka</strong>
+          <p>Full restoration to her lawfully held seat with all access and communications reinstated, as required by:</p>
+          <div class="demand-cites"><span class="cite gold">B-1</span><span class="cite">O-2</span></div>
+        </div>
+      </div>
+      <div class="demand-card">
+        <div class="demand-num">3</div>
+        <div class="demand-body">
+          <strong>Produce All Withheld Records Immediately</strong>
+          <p>All meeting notices, agendas, minutes, voting records, written consents, and communications relating to the removal — withheld in violation of:</p>
+          <div class="demand-cites"><span class="cite red">T-1</span> <span style="font-size:13px;color:var(--muted)">Tex. Prop. Code § 209.005</span></div>
+        </div>
+      </div>
+      <div class="demand-card">
+        <div class="demand-num">4</div>
+        <div class="demand-body">
+          <strong>Appoint a Neutral Third Party to Oversee Governance</strong>
+          <p>An independent attorney or licensed community association manager not affiliated with Prestige Association Management Group, to ensure compliance with governing documents and Texas law pending resolution.</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Under <span style="color:var(--gold)">Tex. Prop. Code § 209.0059 [T-3]</span>:</strong> A petition signed by at least 10% of voting interests (10 of 100 homes) legally compels the Board to call a special homeowner meeting. Under <strong>§ 209.00592 [T-4]</strong>, homeowners may vote to remove a board member by majority at that meeting. Refusal to call the meeting is itself a violation of Texas law.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Petition Progress</div>
+    <h2>Signatures <span id="sig-count-head" style="color:var(--red)"></span></h2>
+    <div class="progress-wrap"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="sig-goal" id="sig-goal-text">0 of 100 — 10 needed to trigger legal obligation under § 209.0059</div>
+    <div id="sig-list-wrap"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Add Your Name</div>
+    <h2>Sign the Petition</h2>
+    <p>By signing, you confirm you are a homeowner and member of record of Parkwood Place HOA and support the four demands stated in this petition, authorizing submission pursuant to <span class="cite red">T-3</span> <strong>Tex. Prop. Code § 209.0059</strong>.</p>
+    <div class="petition-form-wrap">
+      <div class="petition-form-header">🏠 Homeowner Signature</div>
+      <div class="petition-form-body">
+        <div class="form-row">
+          <div class="form-group"><label for="f-first">First Name *</label><input type="text" id="f-first" placeholder="Jane" autocomplete="given-name"></div>
+          <div class="form-group"><label for="f-last">Last Name *</label><input type="text" id="f-last" placeholder="Smith" autocomplete="family-name"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="f-address">Street Address *</label><input type="text" id="f-address" placeholder="123 Parkwood Lane" autocomplete="street-address"></div>
+          <div class="form-group"><label for="f-email">Email (optional)</label><input type="email" id="f-email" placeholder="jane@email.com" autocomplete="email"></div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group"><label for="f-comment">Comment to the Board (optional)</label><textarea id="f-comment" placeholder="Add a message..."></textarea></div>
+        </div>
+        <div class="form-consent">
+          <input type="checkbox" id="f-consent">
+          <label for="f-consent">I am a homeowner and member of record of Parkwood Place HOA. I support the four demands in this petition and authorize its submission pursuant to Tex. Prop. Code § 209.0059. I understand my name and address (but not email) will be visible to other signers and submitted to the Board.</label>
+        </div>
+        <button class="submit-btn" id="submit-btn" onclick="submitPetition()">Sign the Petition →</button>
+        <div id="form-error" style="color:var(--red);font-size:14px;margin-top:10px;display:none"></div>
+        <div id="form-success">
+          <div class="check">✅</div>
+          <p>Your signature has been recorded.</p>
+          <small>Thank you. Use the export button below to send all signatures to Director Repka.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="export-wrap">
+      <p><strong>Ready to submit?</strong> Click below to export all signatures and send them to Director Candi Repka via email. She will compile and submit the petition to the Board via certified mail pursuant to <strong>Tex. Prop. Code § 209.0059</strong>.</p>
+      <button class="export-btn" id="export-btn" onclick="exportSignatures()" disabled>📧 Email All Signatures to Director Repka</button>
+      <div class="export-note" id="export-note">No signatures collected yet.</div>
+    </div>
+
+    <div class="submit-instructions">
+      <p style="margin-bottom:8px"><strong>How this petition will be submitted:</strong></p>
+      <p>Pursuant to <span class="cite red">T-3</span> <strong>Tex. Prop. Code § 209.0059</strong>, signatures will be delivered via <strong>certified mail</strong> to:</p>
+      <p style="margin-top:8px;padding-left:14px;border-left:3px solid var(--navy)">Chris Bergeron, Association Manager<br>Prestige Association Management Group<br>1849 Kingwood Dr. #103, Kingwood, TX 77339 &mdash; (281) 607-7701</p>
+      <p style="margin-top:10px">Upon receipt of signatures from at least 10% of voting interests (10 of 100 homes), the Board is <strong>legally required</strong> under <strong>§ 209.0059</strong> to call a special meeting. Refusal is itself a violation of Texas law.</p>
+      <p style="margin-top:10px">Contact: <a href="mailto:candirepka@gmail.com"><strong>candirepka@gmail.com</strong></a> &mdash; <strong>(361) 523-9119</strong></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Parkwood Place Homeowners' Association &mdash; Harris County, Texas</p>
+  <p>Director Candi Repka &mdash; <a href="mailto:candirepka@gmail.com">candirepka@gmail.com</a> &mdash; (361) 523-9119</p>
+  <p style="margin-top:6px">All statutes verifiable at <a href="https://statutes.capitol.texas.gov" target="_blank">statutes.capitol.texas.gov</a></p>
+  <p style="margin-top:6px;font-size:12px;opacity:.6">Legal Counsel: Harry J. Schulz, III &mdash; Schulz &amp; Schulz, P.C. &mdash; (361) 786-2545</p>
+</footer>
+
+<script>
+const signatures=[];
+const GOAL=10,MAX=100;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function updateUI(){
+  const n=signatures.length,pct=Math.min(100,Math.round(n/MAX*100));
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('sig-count-head').textContent=n>0?'('+n+')':'';
+  let t='';
+  if(n===0)t='0 of 100 — 10 needed to trigger legal obligation under § 209.0059';
+  else if(n<GOAL)t=n+' signature'+(n===1?'':'s')+' — '+(GOAL-n)+' more needed to trigger § 209.0059 legal obligation';
+  else if(n<MAX)t='✅ '+n+' signatures — § 209.0059 threshold reached! Keep going — '+n+' of 100 homes signed.';
+  else t='🎉 All 100 homeowners have signed!';
+  document.getElementById('sig-goal-text').textContent=t;
+  const eb=document.getElementById('export-btn'),en=document.getElementById('export-note');
+  document.getElementById('export-count')&&(document.getElementById('export-count').textContent=n);
+  if(n===0){eb.disabled=true;en.textContent='No signatures collected yet — sign above first.';}
+  else{eb.disabled=false;en.textContent=n+' signature'+(n===1?'':'s')+' collected — click to open your email app with all signatures pre-filled.';}
+  const w=document.getElementById('sig-list-wrap');
+  if(!n){w.innerHTML='';return;}
+  w.innerHTML=signatures.slice().reverse().map(s=>{
+    const ini=(s.first[0]+s.last[0]).toUpperCase();
+    return '<div class="sig-entry"><div class="sig-avatar">'+ini+'</div><div><div class="sig-name">'+esc(s.first)+' '+esc(s.last[0])+'.</div><div class="sig-info">'+esc(s.address)+(s.comment?' — "'+esc(s.comment)+'"':'')+'</div></div><div class="sig-time">'+s.time+'</div></div>';
+  }).join('');
+}
+function submitPetition(){
+  const first=document.getElementById('f-first').value.trim(),last=document.getElementById('f-last').value.trim();
+  const address=document.getElementById('f-address').value.trim(),email=document.getElementById('f-email').value.trim();
+  const comment=document.getElementById('f-comment').value.trim(),consent=document.getElementById('f-consent').checked;
+  const err=document.getElementById('form-error');
+  const btn=document.getElementById('submit-btn');
+  err.style.display='none';
+  if(!first||!last){err.textContent='Please enter your first and last name.';err.style.display='block';return;}
+  if(!address){err.textContent='Please enter your street address.';err.style.display='block';return;}
+  if(!consent){err.textContent='Please check the consent box to confirm you are a Parkwood Place homeowner.';err.style.display='block';return;}
+  if(signatures.length>=MAX){err.textContent='The petition has reached 100 signatures. Please contact Director Repka directly.';err.style.display='block';return;}
+  const dup=signatures.find(s=>s.first.toLowerCase()===first.toLowerCase()&&s.last.toLowerCase()===last.toLowerCase()&&s.address.toLowerCase()===address.toLowerCase());
+  if(dup){err.textContent='This name and address has already been signed. Thank you!';err.style.display='block';return;}
+  btn.disabled=true;
+  btn.textContent='Submitting...';
+  const now=new Date(),time=now.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})+' '+now.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  // Build and submit a hidden form directly to Formspree
+  // This method works from local files AND hosted pages
+  const hf=document.createElement('form');
+  hf.method='POST';
+  hf.action='https://formspree.io/f/xkoaznwr';
+  hf.target='formspree_iframe';
+  hf.style.display='none';
+  const fields={
+    '_subject':'Parkwood Place HOA Petition — New Signature: '+first+' '+last,
+    'First Name':first,
+    'Last Name':last,
+    'Full Name':first+' '+last,
+    'Street Address':address,
+    'Email':email||'(not provided)',
+    'Comment to Board':comment||'(none)',
+    'Signed At':time,
+    'Petition':'Parkwood Place HOA — Petition for Special Meeting (Tex. Prop. Code § 209.0059)',
+    '_next':'about:blank'
+  };
+  Object.entries(fields).forEach(([k,v])=>{
+    const i=document.createElement('input');
+    i.type='hidden';i.name=k;i.value=v;
+    hf.appendChild(i);
+  });
+  // Hidden iframe to catch the redirect so page doesn't navigate away
+  let iframe=document.getElementById('formspree_iframe');
+  if(!iframe){
+    iframe=document.createElement('iframe');
+    iframe.name='formspree_iframe';
+    iframe.id='formspree_iframe';
+    iframe.style.display='none';
+    document.body.appendChild(iframe);
+  }
+  document.body.appendChild(hf);
+  // On iframe load = Formspree responded = submission went through
+  iframe.onload=function(){
+    // Add to local display
+    signatures.push({first,last,address,email,comment,time});
+    updateUI();
+    ['f-first','f-last','f-address','f-email','f-comment'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('f-consent').checked=false;
+    document.getElementById('form-success').style.display='block';
+    btn.textContent='✓ Signed — Thank you!';
+    hf.remove();
+    setTimeout(()=>document.getElementById('sig-goal-text').scrollIntoView({behavior:'smooth',block:'center'}),400);
+    // Reset so next person can sign
+    setTimeout(()=>{
+      btn.disabled=false;
+      btn.textContent='Sign the Petition →';
+      document.getElementById('form-success').style.display='none';
+      iframe.onload=null;
+    },4000);
+  };
+  hf.submit();
+}
+function exportSignatures(){
+  if(!signatures.length)return;
+  const n=signatures.length,d=new Date();
+  const subject='Parkwood Place HOA Petition — '+n+' Homeowner Signature'+(n===1?'':'s')+' (Tex. Prop. Code § 209.0059) — '+d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  let body='Dear Director Repka,\n\nPlease find below the signatures collected via the digital homeowner petition for Parkwood Place HOA, submitted pursuant to Texas Property Code § 209.0059.\n\n';
+  body+='PETITION FOR SPECIAL MEETING & BOARD ACCOUNTABILITY\n';
+  body+='Pursuant to: Tex. Prop. Code § 209.0059 [T-3] and § 209.00592 [T-4]\n';
+  body+='Total Signatures: '+n+' of 100 homeowners\n';
+  body+='Export Date/Time: '+d.toLocaleString('en-US')+'\n\n';
+  body+='All statutes verifiable at: statutes.capitol.texas.gov\n\n';
+  body+='━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+  body+='FOUR DEMANDS (with legal authority):\n';
+  body+='1. Remove Board members who voted for the removal [B-1 Bylaws Art. IV §5, B-2 Declaration Art. XII §3(a), T-2 §209.0051, O-1 §22.102, O-2 §22.211, O-3 §20.002]\n';
+  body+='2. Reinstate Director Candi Repka [B-1 Bylaws Art. IV §5, O-2 §22.211]\n';
+  body+='3. Produce all withheld records [T-1 Tex. Prop. Code §209.005]\n';
+  body+='4. Appoint a neutral third party to oversee governance\n';
+  body+='━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+  body+='SIGNATURES:\n\n';
+  signatures.forEach((s,i)=>{
+    body+=(i+1)+'. '+s.first+' '+s.last+'\n';
+    body+='   Address: '+s.address+'\n';
+    body+='   Signed: '+s.time+'\n';
+    if(s.comment)body+='   Comment: "'+s.comment+'"\n';
+    body+='\n';
+  });
+  body+='━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+  body+='SUBMISSION INSTRUCTIONS:\n';
+  body+='Per Tex. Prop. Code §209.0059, deliver via certified mail to:\n';
+  body+='Chris Bergeron, Prestige Association Management Group\n';
+  body+='1849 Kingwood Dr. #103, Kingwood, TX 77339\n\n';
+  body+='Upon receipt of signatures from ≥10% of voting interests (10/100 homes),\n';
+  body+='the Board is LEGALLY REQUIRED to call a special homeowner meeting.\n';
+  body+='Refusal is itself a violation of Texas Property Code §209.0059.\n\n';
+  body+='Sincerely,\nParkwood Place Homeowners';
+  window.location.href='mailto:candirepka@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+updateUI();
+</script>
+</body>
+</html>
